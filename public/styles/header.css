@@ -1,0 +1,37 @@
+
+.header {
+  background-color: #98de85;
+  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png"); height: 400px;
+  height: 400px;
+  width: 100%;
+}
+
+.avtr_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: auto;
+  margin-top: 1.5em;
+}
+
+.name_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  margin-bottom: 2em;
+  font-family: 'Quicksand', sans-serif;
+}
