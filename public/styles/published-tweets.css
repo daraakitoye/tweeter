@@ -1,0 +1,75 @@
+main {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.tweet-container {
+  width: 75%;
+  height: 10em;
+  margin-top: 2.5em;
+  margin-bottom: 0.5em;
+  border-style: solid;
+  transition: box-shadow .3s;
+}
+
+
+.tweet-container:hover {
+  box-shadow: 8px 11px 15px rgba(33,33,33,.2); 
+}
+
+
+.tweet {
+  margin: 2em;
+}
+
+.tweet-container div.username {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-container label {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+ 
+}
+
+.tweet-container div.tweet-text {
+  background-color: #f4f1ec;
+  display: flex;
+  
+  /* justify-content: space-around; */
+
+  flex-direction: row;
+  width: 100%;
+  border-style: solid;
+  border-bottom-width: 5px;
+  border-bottom-color:#362107;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  border-top: #f4f1ec;
+  border-right: #f4f1ec;
+  border-left: #f4f1ec;
+  
+}
+
+
+.tweet-container div.time-sent{
+font-family: 'Bungee', sans-serif;
+color: black;
+display: flex;
+font-size: smaller;
+margin-right: 43em;
+}
+
+.tweet-container div.icon-container {
+display: flex;
+flex-direction: row-reverse;
+}
+.tweet-container .fa-solid{
+  color:crimson;
+  margin-right: 1.5em;
+}
