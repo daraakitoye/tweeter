@@ -12,9 +12,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap"
     rel="stylesheet">
-  <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" /-->
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
 
   <!-- App CSS -->
@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css">
   <link rel="stylesheet" href="/styles/new-tweet.css">
+  <link rel="stylesheet" href="/styles/published-tweets.css">
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/0e6687751d.js" crossorigin="anonymous"></script>
@@ -63,9 +64,31 @@
         <div>
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
-
         </div>
       </form>
+    </section>
+
+    <section class="tweet-container">
+      <div class="tweet">
+        <div class="username">Your Username
+          <label><strong>@yourusername</strong></label>
+        </div>
+
+
+        <div name="text" class="tweet-text">Welcome welcome welcome</div>
+        <!-- <hr> -->
+        <div>
+          <div class="time-sent">2 days ago</div>
+          <!-- <output name="counter" class="counter" for="tweet-text">140</output> -->
+        </div>
+
+        <div class="icon-container">
+          <i class="fas fa-angle-double-down"></i>
+          <i class="fa-solid fa-paper-plane"></i>
+          <i class="fas fa-angle-double-down"></i>
+        </div>
+
+      </div>
     </section>
 
   </main>
