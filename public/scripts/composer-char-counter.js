@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-  $('textarea').keydown((event) => {
+  $('textarea').keyup((event) => {
     const charLength = event.target.value.length;
 
     $('.counter').text(140 - charLength)
