@@ -23,9 +23,26 @@ main {
   margin: 2em;
 }
 
+/* .tweet-container img {
+  display: flex;
+ align-items: flex-end;
+} */
+
 .tweet-container div.username {
   display: flex;
-  justify-content: space-between;
+  margin-left: 0.5em;
+}
+
+.tweet-container div.test {
+  display: flex;
+ flex-direction: row;
+}
+
+.tweet-container img {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 54px;
+  width: 54px;  
 }
 
 .tweet-container label {
@@ -34,7 +51,7 @@ main {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
- 
+ margin-left: 33em;
 }
 
 .tweet-container div.tweet-text {
@@ -50,10 +67,11 @@ main {
   border-bottom-color:#362107;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
+  padding-bottom: 10px;
   border-top: #f4f1ec;
   border-right: #f4f1ec;
   border-left: #f4f1ec;
-  
+  font-weight: bold;
 }
 
 
@@ -61,15 +79,17 @@ main {
 font-family: 'Bungee', sans-serif;
 color: black;
 display: flex;
-font-size: smaller;
+font-size: 10px;
 margin-right: 43em;
+margin-bottom: 2em;
 }
 
 .tweet-container div.icon-container {
 display: flex;
 flex-direction: row-reverse;
 }
-.tweet-container .fa-solid{
+.tweet-container .fa-flag{
   color:crimson;
   margin-right: 1.5em;
+ 
 }
