@@ -8,7 +8,7 @@ main {
   width: 75%;
   height: 10em;
   margin-top: 2.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 2.5em;
   border-style: solid;
   transition: box-shadow .3s;
 }
@@ -23,73 +23,63 @@ main {
   margin: 2em;
 }
 
-/* .tweet-container img {
-  display: flex;
- align-items: flex-end;
-} */
-
-.tweet-container div.username {
-  display: flex;
-  margin-left: 0.5em;
-}
-
-.tweet-container div.test {
-  display: flex;
- flex-direction: row;
-}
-
 .tweet-container img {
   display: flex;
-  flex-direction: row-reverse;
   height: 54px;
-  width: 54px;  
-}
-
-.tweet-container label {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 500px;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
- margin-left: 33em;
-}
-
-.tweet-container div.tweet-text {
-  background-color: #f4f1ec;
-  display: flex;
-  
-  /* justify-content: space-around; */
-
-  flex-direction: row;
-  width: 100%;
-  border-style: solid;
-  border-bottom-width: 5px;
-  border-bottom-color:#362107;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-  padding-bottom: 10px;
-  border-top: #f4f1ec;
-  border-right: #f4f1ec;
-  border-left: #f4f1ec;
-  font-weight: bold;
-}
-
-
-.tweet-container div.time-sent{
-font-family: 'Bungee', sans-serif;
-color: black;
-display: flex;
-font-size: 10px;
-margin-right: 43em;
-margin-bottom: 2em;
-}
-
-.tweet-container div.icon-container {
-display: flex;
-flex-direction: row-reverse;
-}
-.tweet-container .fa-flag{
-  color:crimson;
-  margin-right: 1.5em;
  
+}
+
+.tweet-container header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 25px;
+
+}
+.tweet-container .username {
+  margin-left: auto;
+  font-family: 'Quicksand', sans-serif;
+  color: grey;
+  font-weight: bolder;
+}
+.tweet-container .name {
+  margin-left: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #000;
+}
+
+.tweet-container .submitted-tweet {
+  font-family: 'Quicksand', sans-serif;
+  color: black;
+}
+
+.tweet-container hr {
+  width: auto;
+ border-bottom: 2px solid;
+}
+
+.tweet-container footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tweet-container .time-sent {
+  font-size: small;
+  color: #000;
+}
+
+.tweet-container .icons {
+  color: #4056A1;
+}
+
+.tweet-container i.fa-flag:hover {
+  color:rgba(161, 209, 117, 0.932);
+}
+
+.tweet-container i.fa-retweet:hover {
+  color:rgba(161, 209, 117, 0.932);
+}
+
+.tweet-container i.fa-heart:hover {
+  color:rgba(161, 209, 117, 0.932);
 }
