@@ -1,7 +1,6 @@
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
 $(document).ready(function () {
@@ -43,10 +42,11 @@ $(document).ready(function () {
   const renderTweets = function (userData) {
     for (const tweet of userData) {
       const $tweet = createTweetElement(tweet);
-      $('#tweet-container').append($tweet);
+      $('#tweet-container').prepend($tweet);
     }
   };
 
+  //loads tweets to page
   const loadTweets = function () {
     $.ajax('/tweets', { method: 'GET' })
       .then(function (fetchedTweets) {
@@ -56,37 +56,29 @@ $(document).ready(function () {
 
   loadTweets();
 
-  //prevents page from redirecting on submit button
+
   $('.new-tweet form').submit(function (event) {
+    //clears animation queue for error message
     $('#error-message').empty().slideUp()
+    //prevents page from redirecting on submit button
     event.preventDefault();
     const $input = $('#tweet-text').val().trim();
 
-    console.log($input)
-    //note: fix trailing space bug
     if (!$input) {
       $('#error-message').append('<b><i class="fa fa-times-circle"></i> Unable to sumbit:</b> Tweet must be at least one alphanumeric character long.').slideDown('slow')
     } else if ($input.length > 140) {
-      $('#error-message').append('<b>Too long:</b> Tweet must be 140 characters or less.').slideDown('slow')
+      $('#error-message').append('<b><i class="fa fa-times-circle"></i> Too long:</b> Tweet must be 140 characters or less.').slideDown('slow')
     } else {
       $.ajax({
         method: "POST",
         url: "/tweets",
         data: $(this).serialize()
-      }).then(function () {
+      }).then(function () { // loads tweets without refreshing page
         loadTweets();
         $('#tweet-text').val('');
-      }).then(function (arr) {
-        $('#tweet-text').reset();
+      }).then(function () {
+        $('#tweet-text').reset(); //resets textarea box
       })
     }
   });
-
-
-
-
-
-
-
-
 });
