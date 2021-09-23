@@ -1,39 +1,39 @@
 
-.header {
+body > header {
   background-color: #98de85;
   background-image: url("https://www.transparenttextures.com/patterns/cartographer.png"); height: 400px;
   height: 400px;
   width: 100%;
   margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.avtr_box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.avatar img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  margin: auto;
-  margin-top: 1.5em;
+body > header .avtr_box {
+ margin-top: 30px;
 }
 
-.name_box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+body > header .avatar img {
+  margin: 6px;
+}
+
+body > header .name_box {
   margin-bottom: 2em;
 }
 
-h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+body > header h2 {
   color: whitesmoke;
-  justify-content: flex-start;
   margin: auto;
   font-family: 'Quicksand', sans-serif;
+}
+
+@media  (min-width: 850px) {
+  body > header {
+    width: 30vw;
+    float: left;
+    margin: 170px 0px 0px 170px;
+    position: fixed;
+  }
 }
