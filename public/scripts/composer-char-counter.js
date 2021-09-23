@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-
+  //character number decereses as user types
   $('textarea').keyup((event) => {
     const charLength = event.target.value.length;
 
