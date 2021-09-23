@@ -78,9 +78,6 @@ $(document).ready(function () {
         $('#tweet-text').val('');
       }).then(function (arr) {
         $('#tweet-text').reset();
-        // $('output').text(140);
-        // const latest = [arr[arr.length - 1]]
-        // renderTweets(latest);
       })
     }
   });
