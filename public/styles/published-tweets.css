@@ -103,3 +103,10 @@ main {
 .tweet-container i.fa-heart:hover {
   color:rgba(161, 209, 117, 0.932);
 }
+
+#error-message {
+ 
+  margin:10px ; 
+  color: #D8000C;
+    background-color: #FFD2D2;
+}
