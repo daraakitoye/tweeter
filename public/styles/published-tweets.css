@@ -1,15 +1,6 @@
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
-#tweets-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+section.tweet-container {
+  width: 100%;
 }
 
 .tweet-container {
@@ -19,9 +10,7 @@ main {
   margin-bottom: 2.5em;
   border-style: solid;
   transition: box-shadow .3s;
-  
 }
-
 
 
 .tweet-container:hover {
@@ -71,7 +60,7 @@ main {
 .tweet-container hr {
   width: 95%;
  border-bottom: 2px solid;
- margin-top: 1.5em;
+ margin-top: 10px;
 }
 
 .tweet-container footer {
@@ -102,11 +91,4 @@ main {
 
 .tweet-container i.fa-heart:hover {
   color:rgba(161, 209, 117, 0.932);
-}
-
-#error-message {
- 
-  margin:10px ; 
-  color: #D8000C;
-    background-color: #FFD2D2;
 }
