@@ -58,28 +58,34 @@
 
     <section class="new-tweet">
       <!-- <h2>Compose Tweet</h2> -->
-      <form id="compose-tweet" action="/tweets" method="POST">
-        <label for="tweet-text"><strong>What are you humming about?</strong></label>
-        <textarea name="text" class="tweet-text" id="texts"></textarea>
-        <!-- <hr> -->
-        <div>
-          <button class="submit-btn" type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
+      <form action="/tweets" method="post">
+        <!-- <label for="tweet-text">What are you humming about?</label>  -->
+        <div class="btn-and-input">
+          <label class="question"><strong>What are you humming about?</strong></label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div class="interactivity">
+
+            <button id="submit-btn" type="submit" class="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+
+
+          </div>
         </div>
       </form>
       <script>
         $(document).ready(function () {
-          $(".submit-btn").click(function () {
-            $("#compose-tweet").trigger("reset");
+          $("#submit-btn").click(function () {
+            $("textarea").trigger("reset");
           });
         })
 
       </script>
+      <section id="tweet-container" class="tweets-container">
+      </section>
     </section>
 
-    <section id="tweet-container" class="tweet-container">
 
-    </section>
+
 
 
   </main>
