@@ -65,7 +65,7 @@ $(document).ready(function () {
     const $input = $('#tweet-text').val().trim();
 
     if (!$input) {
-      $('#error-message').append('<b><i class="fa fa-times-circle"></i> Unable to sumbit:</b> Tweet must be at least one alphanumeric character long.').slideDown('slow')
+      $('#error-message').append('<b><i class="fa fa-times-circle"></i> Unable to submit:</b> Tweet must be at least one alphanumeric character long.').slideDown('slow')
     } else if ($input.length > 140) {
       $('#error-message').append('<b><i class="fa fa-times-circle"></i> Too long:</b> Tweet must be 140 characters or less.').slideDown('slow')
     } else {
