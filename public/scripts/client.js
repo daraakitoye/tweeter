@@ -58,15 +58,16 @@ $(document).ready(function () {
 
   //prevents page from redirecting on submit button
   $('.new-tweet form').submit(function (event) {
+    $('#error-message').empty().slideUp()
     event.preventDefault();
     const $input = $('#tweet-text').val().trim();
 
     console.log($input)
     //note: fix trailing space bug
     if (!$input) {
-      alert('Unable to sumbit: Tweet must be at least one alphanumeric character long.');
+      $('#error-message').append('<b><i class="fa fa-times-circle"></i> Unable to sumbit:</b> Tweet must be at least one alphanumeric character long.').slideDown('slow')
     } else if ($input.length > 140) {
-      alert('Unable to submit: Too long, your tweet must be no greater than 140 characters')
+      $('#error-message').append('<b>Too long:</b> Tweet must be 140 characters or less.').slideDown('slow')
     } else {
       $.ajax({
         method: "POST",
