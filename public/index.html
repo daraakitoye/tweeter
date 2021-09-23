@@ -57,18 +57,13 @@
   <main class="container">
     <div id="error-message"></div>
     <section class="new-tweet">
-      <!-- <h2>Compose Tweet</h2> -->
       <form action="/tweets" method="post">
-        <!-- <label for="tweet-text">What are you humming about?</label>  -->
         <div class="btn-and-input">
           <label class="question"><strong>What are you humming about?</strong></label>
           <textarea name="text" id="tweet-text"></textarea>
           <div class="interactivity">
-
             <button id="submit-btn" type="submit" class="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
-
-
           </div>
         </div>
       </form>
@@ -78,16 +73,10 @@
             $("textarea").trigger("reset");
           });
         })
-
       </script>
       <section id="tweet-container" class="tweets-container">
       </section>
     </section>
-
-
-
-
-
   </main>
 </body>
 
