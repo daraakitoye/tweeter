@@ -1,17 +1,27 @@
 main {
   display: flex;
   flex-direction: column;
-  
+  justify-content: center;
+  align-items: center;
+}
+
+#tweets-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .tweet-container {
-  width: 75%;
+  width: 90%;
   height: 10em;
   margin-top: 2.5em;
   margin-bottom: 2.5em;
   border-style: solid;
   transition: box-shadow .3s;
+  
 }
+
 
 
 .tweet-container:hover {
@@ -25,6 +35,7 @@ main {
 
 .tweet-container img {
   display: flex;
+  margin-left: 10px;
   height: 54px;
  
 }
@@ -32,14 +43,17 @@ main {
 .tweet-container header {
   display: flex;
   flex-direction: row;
+  margin-top: 20px;
   margin-bottom: 25px;
 
 }
 .tweet-container .username {
   margin-left: auto;
+  margin-right: 10px;
   font-family: 'Quicksand', sans-serif;
   color: grey;
   font-weight: bolder;
+  
 }
 .tweet-container .name {
   margin-left: 20px;
@@ -50,17 +64,21 @@ main {
 .tweet-container .submitted-tweet {
   font-family: 'Quicksand', sans-serif;
   color: black;
+  overflow-wrap: break-word;
+  padding: 10px;
 }
 
 .tweet-container hr {
-  width: auto;
+  width: 95%;
  border-bottom: 2px solid;
+ margin-top: 1.5em;
 }
 
 .tweet-container footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 0.5em;
 }
 
 .tweet-container .time-sent {
@@ -70,6 +88,8 @@ main {
 
 .tweet-container .icons {
   color: #4056A1;
+  margin-right: 10px;
+  font-size: small;
 }
 
 .tweet-container i.fa-flag:hover {
