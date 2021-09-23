@@ -6,11 +6,15 @@
 
 $(document).ready(function () {
 
-
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
   //dynamically updates&styles tweets automatically
 
   const createTweetElement = (tweets) => {
-    const $tweet = $('<article>').addClass('tweet');
+    const $tweet = $('<article>').addClass('tweet-container');
 
     const HTML = `
    
@@ -19,7 +23,7 @@ $(document).ready(function () {
      <span class="name">${tweets.user.name}</span>
       <span class="username">${tweets.user.handle}</span>
     </header>
-    <span class="submitted-tweet">${tweets.content.text}</span>
+    <span class="submitted-tweet">${escape(tweets.content.text)}</span>
     <hr>
     <footer>
     <span class="time-sent">${timeago.format(tweets['created_at'])}</span>
@@ -35,9 +39,6 @@ $(document).ready(function () {
   }
 
 
-
-
-
   // //renders tweet to page
   const renderTweets = function (userData) {
     for (const tweet of userData) {
@@ -46,38 +47,46 @@ $(document).ready(function () {
     }
   };
 
-
-
-
   const loadTweets = function () {
     $.ajax('/tweets', { method: 'GET' })
       .then(function (fetchedTweets) {
         renderTweets(fetchedTweets);
       })
   }
+
   loadTweets();
 
   //prevents page from redirecting on submit button
   $('.new-tweet form').submit(function (event) {
     event.preventDefault();
-    // const $input = $(this);
-    const $inputText = $(this).children('texts')
-    console.log($inputText)
+    const $input = $('#tweet-text').val().trim();
 
-    // if (!$inputText) {
-    //   alert("Cannot submit empty text area. All tweets must be at least one character long.");
-    // } else if ($inputText.length > 140) {
-    //   alert("Too long: Cannot submit tweet greater than 140 characters.");
-    // } else {
-    const encoded = $('form').serialize();
-    $.ajax({ url: "/tweets/", method: 'POST', data: encoded })
-
+    console.log($input)
+    //note: fix trailing space bug
+    if (!$input) {
+      alert('Unable to sumbit: Tweet must be at least one alphanumeric character long.');
+    } else if ($input.length > 140) {
+      alert('Unable to submit: Too long, your tweet must be no greater than 140 characters')
+    } else {
+      $.ajax({
+        method: "POST",
+        url: "/tweets",
+        data: $(this).serialize()
+      }).then(function () {
+        loadTweets();
+        $('#tweet-text').val('');
+      }).then(function (arr) {
+        $('#tweet-text').reset();
+        // $('output').text(140);
+        // const latest = [arr[arr.length - 1]]
+        // renderTweets(latest);
+      })
+    }
   });
 
 
 
 
-  // Test / driver code (temporary). Eventually will get this from the server.
 
 
 
