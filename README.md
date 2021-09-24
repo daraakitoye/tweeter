@@ -22,7 +22,7 @@ This repository has the starter code for the project. You can see my front-end c
 - Express
 - Node 5.10.x or above
 
-##Stack
+## Stack
 - HTML
 - CSS
 - JS
