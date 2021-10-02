@@ -63,17 +63,10 @@
           <textarea name="text" id="tweet-text"></textarea>
           <div class="interactivity">
             <button id="submit-btn" type="submit" class="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <output name="counter" id="" class="counter" for="tweet-text">140</output>
           </div>
         </div>
       </form>
-      <script>
-        $(document).ready(function () {
-          $("#submit-btn").click(function () {
-            $("textarea").trigger("reset");
-          });
-        })
-      </script>
       <section id="tweet-container" class="tweets-container">
       </section>
     </section>
