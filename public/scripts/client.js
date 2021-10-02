@@ -76,9 +76,8 @@ $(document).ready(function () {
       }).then(function () { // loads tweets without refreshing page
         loadTweets();
         $('#tweet-text').val('');
-      }).then(function () {
-        $('#tweet-text').reset(); //resets textarea box
-      })
-    }
+        $('output').val(140);
+      });
+    };
   });
 });
